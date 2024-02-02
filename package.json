@@ -2,7 +2,10 @@
   "name": "base",
   "version": "1.0.0",
   "description": "This is an assignment given by openinapp for UI development role.",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taraksh01/base-OpenInApp.git"
