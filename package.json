@@ -1,0 +1,21 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "This is an assignment given by openinapp for UI development role.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taraksh01/base-OpenInApp.git"
+  },
+  "keywords": [
+    "base",
+    "taraksh01",
+    "openinapp"
+  ],
+  "author": "Tarak Shaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taraksh01/base-OpenInApp/issues"
+  },
+  "homepage": "https://github.com/taraksh01/base-OpenInApp#readme"
+}
