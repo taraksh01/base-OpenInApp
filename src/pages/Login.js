@@ -1,7 +1,7 @@
 import Logo from "../assets/base.svg";
-import Form from "./Form";
-import LoginButton from "./LoginButton";
-import Socials from "./Socials";
+import Form from "../components/Form";
+import LoginButton from "../components/LoginButton";
+import Socials from "../components/Socials";
 
 const Home = () => {
   return (
