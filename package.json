@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/taraksh01/base-OpenInApp#readme",
   "dependencies": {
+    "parcel": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
