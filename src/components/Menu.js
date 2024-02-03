@@ -10,15 +10,21 @@ import Cross from "../assets/cross.svg";
 
 const Menu = ({ showMenu, setShowMenu }) => {
   return (
-    <div className="md:w-52 w-72 font-semibold">
+    <div
+      className={`${
+        showMenu ? "flex flex-col" : "hidden"
+      } w-3/4 md:w-56 md:block font-semibold bg-white z-10 absolute h-full`}
+    >
       <div className="flex justify-between md:justify-center items-center gap-8 p-5">
-        <img src={BaseInverted} alt="Base" />
-        <h1 className="font-semibold text-xl">Base</h1>
+        <div className="flex items-center gap-4">
+          <img src={BaseInverted} alt="Base" />
+          <h1 className="font-semibold text-xl">Base</h1>
+        </div>
         <img
           src={Cross}
           alt="Cross"
-          className="md:hidden block"
-          onAbort={() => setShowMenu(!showMenu)}
+          className="md:hidden block cursor-pointer"
+          onClick={() => setShowMenu(false)}
         />
       </div>
       <div className="flex flex-col gap-8 text-gray-400 p-5">
