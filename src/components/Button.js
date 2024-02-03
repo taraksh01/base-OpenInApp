@@ -1,10 +1,10 @@
-const Button = ({ type, text }) => {
+const Button = ({ type, text, img, property }) => {
   return (
     <button
       type={type}
-      className="text-white bg-indigo-500 h-11 rounded-xl text-center font-bold"
+      className={`text-white w-full bg-indigo-500 h-11 rounded-lg font-bold flex justify-center items-center flex-shrink-0 gap-3 ${property}`}
     >
-      {text}
+      {<img src={img} />} {text}
     </button>
   );
 };
