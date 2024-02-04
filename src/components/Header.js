@@ -18,8 +18,8 @@ const Header = ({ setShowMenu }) => {
         <h2 className="font-semibold">Base</h2>
       </div>
       <h2 className="hidden md:block font-semibold text-2xl">Upload CSV</h2>
-      <div className="flex gap-5 shrink-0">
-        <img src={TopNotification} alt="notification" />
+      <div className="flex gap-5 shrink-0 items-center">
+        <img src={TopNotification} alt="notification" className="h-6 w-6" />
         <img src="" className="rounded-full w-8 h-8 bg-indigo-500" />
       </div>
     </div>
