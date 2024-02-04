@@ -1,9 +1,22 @@
 import Logo from "../assets/base.svg";
 import Form from "../components/Form";
-import LoginButton from "../components/LoginButton";
+import Google from "../assets/google.svg";
+import Apple from "../assets/apple.svg";
 import Socials from "../components/Socials";
+import { useGoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      tokenResponse.access_token && navigate("/home");
+    },
+    onError: () => {
+      console.log("Login Failed");
+    },
+  });
+
   return (
     <main className="flex flex-col md:flex-row">
       <div className="h-20 flex items-center justify-start md:flex-col md:justify-between md:items-center md:w-1/2 md:h-[100vh] bg-indigo-500 text-white p-5 gap-4 md:p-16">
@@ -22,8 +35,20 @@ const Home = () => {
           <h2 className="text-4xl font-bold self-start">Sign In</h2>
           <p className="self-start">Sign in to your account</p>
           <div className="flex justify-around items-center">
-            <LoginButton text={"Google"} />
-            <LoginButton text={"Apple"} />
+            <button
+              type="button"
+              className="text-xs text-gray-500 bg-gray-50 h-8 flex items-center justify-center gap-4 px-5 rounded-xl shrink-0"
+              onClick={login}
+            >
+              <img src={Google} />
+              Sign in with Google
+            </button>
+            <button
+              type="button"
+              className="text-xs text-gray-500 bg-gray-50 h-8 flex items-center justify-center gap-4 px-5 rounded-xl shrink-0"
+            >
+              <img src={Apple} /> Sign in with Apple
+            </button>
           </div>
           <Form />
           <div className="flex flex-col md:flex-row justify-center items-center md:gap-1">
