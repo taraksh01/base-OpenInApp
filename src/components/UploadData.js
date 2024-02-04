@@ -28,7 +28,7 @@ const UploadData = () => {
                 {item.links}
               </a>
               <p className="min-w-20">{item.prefix}</p>
-              <select className="border border-gray-100 bg-white h-8 w-36 rounded-lg hidden  bg-gray-200hover:bg-gray-100">
+              <select className="border border-gray-100 bg-white h-8 w-36 rounded-lg bg-gray-200hover:bg-gray-100">
                 <option key={-1}>Select Tags</option>
                 {item.tags.split(",").map((tag, index) => (
                   <option key={index}>{tag}</option>
