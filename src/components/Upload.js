@@ -49,8 +49,12 @@ const Upload = () => {
         </div>
         {error && <p className="text-red-600 text-center">{error}</p>}
         {uploadState === "waiting" && (
-          <div
-            onClick={() => {
+          <Button
+            text={"Upload"}
+            img={FileUpload}
+            type={"submit"}
+            property={"h-12"}
+            click={() => {
               selectedFile?.name
                 ? (setUploadState("uploading"),
                   setTimeout(() => {
@@ -58,19 +62,10 @@ const Upload = () => {
                   }, 3000))
                 : setError("Please select a file");
             }}
-          >
-            <Button
-              text={"Upload"}
-              img={FileUpload}
-              type={"submit"}
-              property={"h-12"}
-            />
-          </div>
+          />
         )}
         {uploadState === "uploading" && (
-          <div>
-            <Button img={Spinner} type={"submit"} property={"h-12"} />
-          </div>
+          <Button img={Spinner} type={"submit"} property={"h-12"} />
         )}
         {uploadState === "success" && (
           <Button
