@@ -22,10 +22,13 @@
   },
   "homepage": "https://github.com/taraksh01/base-OpenInApp#readme",
   "dependencies": {
+    "@react-oauth/google": "^0.12.1",
+    "dotenv": "^16.4.1",
     "parcel": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
     "postcss": "^8.4.33",
