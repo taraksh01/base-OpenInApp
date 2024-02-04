@@ -2,7 +2,7 @@ import data from "../assets/frontend.json";
 
 const UploadData = () => {
   return (
-    <div className="m-8">
+    <div className="m-8 min-w-fit">
       <h2 className="text-2xl font-semibold my-4">Uploads</h2>
       <div className="text-sm bg-gray-100 p-3 gap-3">
         <div className="flex font-semibold p-3 gap-32">
@@ -37,7 +37,7 @@ const UploadData = () => {
               <p className="flex gap-4">
                 {item.selected.length > 0 &&
                   item.selected.split(",").map((tag) => (
-                    <p className="bg-indigo-500 text-white rounded-md py-1 px-2">
+                    <p className="bg-indigo-500 text-white rounded-md py-1 px-2 shrink-0">
                       {tag} <span className="pl-1">x</span>
                     </p>
                   ))}
